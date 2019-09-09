@@ -8,6 +8,16 @@ import java.util.Date;
 import org.junit.Test;
 
 public class StringUtilTest {
+	@Test
+	public void testIsPhoneNumber() {
+		boolean number = StringUtil.isPhoneNumber("123456");
+		System.out.println(number);
+		
+	}
+	
+	@Test
+	public void testIsEmail() {
+	}
 
 	@Test
 	public void testHasLength() {
