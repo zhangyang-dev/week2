@@ -15,9 +15,9 @@ public class StringUtil {
 	 * @return
 	 * @return: String
 	 */
-	public static String toHtml(String src) {
+	public static String toHtml(String text) {
 		
-		String str = src.replaceAll(System.getProperty("line.separator"), "|")	;
+		String str = text.replaceAll(System.getProperty("line.separator"), "|")	;
 		String[] split = str.split("\\|");
 		String newStr="";
 		for (String string2 : split) {
@@ -46,6 +46,18 @@ public class StringUtil {
 		 String telRegex = "[1][3578]\\d{9}";
 		 return  number.matches(telRegex);
 		 
+		
+	}
+	
+	public static boolean isPhone(String num) {
+//		判断如果为则返回false
+		if(!hasText(num)) {
+			return false;
+		}
+		
+//		正则
+		String tel = "[1][3578]\\d{9}";
+		return num.matches(tel);
 		
 	}
 	
